@@ -1,5 +1,5 @@
 
-# HydroC-Precsion Z-Score calculation 
+# HydroC-Precsion target height Z-Score calculation 
 ---
 __(WIP)__
 
