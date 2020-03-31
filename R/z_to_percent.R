@@ -8,10 +8,16 @@
 #'
 
 z_to_percent <- function(z_score){
-
+if(z_score > 0){
   i <- substr(z_score, 1, nchar(z_score) - 1)
   j <- substr(z_score, 4, nchar(z_score))
-
+} else if( z_score < 0 ) {
+  i <- substr(z_score, 1, nchar(z_score) - 1)
+  j <- substr(z_score, 5, nchar(z_score))
+} else {
+  i <- 0
+  j <- 0
+}
   if(i %in% data_z[["Z"]]){
     percent <- unname(as.vector(data_z[data_z$Z==i, paste0("X",j)]))
   } else if(nchar(z_score) != 4){
