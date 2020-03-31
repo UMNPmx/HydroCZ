@@ -3,4 +3,4 @@
 #' Z to Percentile
 #' @docType data
 #'
-data_z
+data_z <- read.csv(file.path())
