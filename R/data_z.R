@@ -4,5 +4,5 @@
 #'
 #'
 #' @docType data
-#'
+#' @export data_z
 NULL
