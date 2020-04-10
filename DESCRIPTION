@@ -5,9 +5,8 @@ Version: 0.1.0
 Author: Mutaz Jaber
 Depends: R (>= 3.5.0)
 Maintainer: Mutaz Jaber <jaber038@umn.edu>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
-License: MIT
+Description: This package aimed to calculate Target height and z-score related to it 
+License: MIT + license file
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 7.1.0
