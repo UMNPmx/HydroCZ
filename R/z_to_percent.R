@@ -5,6 +5,7 @@
 #' @param z_score z-score calculated from z_score function
 #'
 #'
+#' @export
 #'
 
 z_to_percent <- function(z_score){
