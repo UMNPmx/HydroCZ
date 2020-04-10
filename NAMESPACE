@@ -2,3 +2,4 @@
 
 export(TargerHt)
 export(z_score)
+export(z_to_percent)
