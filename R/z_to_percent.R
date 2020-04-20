@@ -11,7 +11,7 @@
 z_to_percent <- function(z_score){
 
 if(z_score > 0){
-  i <- substr(z_score, 1, nchar(z_score) - 2)
+  i <- substr(z_score, 1, nchar(z_score) - 1)
   j <- substr(z_score, 4, nchar(z_score))
   if(i %in% data_z[["Z"]]){
     percent <- unname(as.vector(data_z[data_z$Z==i, paste0("X",j)]))
@@ -21,7 +21,7 @@ if(z_score > 0){
     stop("Z-score is not defined")
   }
 } else if( z_score < 0 ) {
-  i <- substr(z_score, 2, nchar(z_score) - 1)
+  i <- substr(z_score, 1, nchar(z_score) - 1)
   j <- substr(z_score, 5, nchar(z_score))
   if(i %in% data_z[["Z"]]){
     percent <- unname(as.vector(data_z[data_z$Z==i, paste0("X",j)]))
