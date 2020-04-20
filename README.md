@@ -3,8 +3,9 @@
 ---
 __(WIP)__
 
-This package is part of HydroC-Percision platform
-Main aim of this package is concerning about growth calculation. 
+This package is part of HydroC-Percision platform 
+
+Main aim of this package is growth calculation in pediatric population. 
 
 > This package is still under-development. 
 
