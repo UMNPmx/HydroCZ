@@ -16,17 +16,17 @@ if(z_score > 0){
   if(as.numeric(i) %in% data_z[["Z"]]){
     percent <- unname(as.vector(data_z[data_z$Z==as.numeric(i), paste0("X",j)]))
   } else if(nchar(z_score) != 4){
-    percent <- unname(as.vector(data_z[data_z$Z==i, paste0("X",0)]))
+    percent <- unname(as.vector(data_z[data_z$Z==as.numeric(i), paste0("X",0)]))
   }else {
     stop("Z-score is not defined")
   }
 } else if( z_score < 0 ) {
   i <- substr(z_score, 1, nchar(z_score) - 1)
   j <- substr(z_score, 5, nchar(z_score))
-  if(i %in% data_z[["Z"]]){
-    percent <- unname(as.vector(data_z[data_z$Z==i, paste0("X",j)]))
+  if(as.numeric(i) %in% data_z[["Z"]]){
+    percent <- unname(as.vector(data_z[data_z$Z==as.numeric(i), paste0("X",j)]))
   } else if(nchar(z_score) != 4){
-    percent <- unname(as.vector(data_z[data_z$Z==i, paste0("X",0)]))
+    percent <- unname(as.vector(data_z[data_z$Z==as.numeric(i), paste0("X",0)]))
   }else {
     stop("Z-score is not defined")
   }
@@ -42,5 +42,5 @@ if(z_score > 0){
   }
 }
 
-  return(percent)
+  return(cat("Percentage:", percent))
 }
