@@ -8,39 +8,32 @@
 #' @export z_to_percent
 #'
 
-z_to_percent <- function(z_score){
+z_to_percent <- function(z_score=NULL){
 
-if(z_score > 0){
+if(z_score > 0 && nchar(z_score) >= 4){
   i <- substr(z_score, 1, nchar(z_score) - 1)
   j <- substr(z_score, 4, nchar(z_score))
-  if(as.numeric(i) %in% data_z[["Z"]]){
-    percent <- unname(as.vector(data_z[data_z$Z==as.numeric(i), paste0("X",j)]))
-  } else if(nchar(z_score) != 4){
+   percent <- unname(as.vector(data_z[data_z$Z==as.numeric(i),
+                                       paste0("X",as.numeric(j))]))
+  } else if(z_score > 0 && nchar(z_score) < 4){
+    i <- substr(z_score, 1, nchar(z_score))
     percent <- unname(as.vector(data_z[data_z$Z==as.numeric(i), paste0("X",0)]))
-  }else {
-    stop("Z-score is not defined")
-  }
-} else if( z_score < 0 ) {
+  } else if( z_score < 0 && nchar(z_score) > 4) {
+
   i <- substr(z_score, 1, nchar(z_score) - 1)
   j <- substr(z_score, 5, nchar(z_score))
-  if(as.numeric(i) %in% data_z[["Z"]]){
-    percent <- unname(as.vector(data_z[data_z$Z==as.numeric(i), paste0("X",j)]))
-  } else if(nchar(z_score) != 4){
+    percent <- unname(as.vector(data_z[data_z$Z==as.numeric(i), paste0("X",as.numeric(j))]))
+  } else if(z_score < 0 && nchar(z_score) <= 4){
+    i <- substr(z_score, 1, nchar(z_score))
     percent <- unname(as.vector(data_z[data_z$Z==as.numeric(i), paste0("X",0)]))
-  }else {
-    stop("Z-score is not defined")
-  }
-} else {
+  } else if (z_score==0){
   i <- 0
   j <- 0
-  if(i %in% data_z[["Z"]]){
     percent <- unname(as.vector(data_z[data_z$Z==i, paste0("X",j)]))
-  } else if(nchar(z_score) != 4){
-    percent <- unname(as.vector(data_z[data_z$Z==i, paste0("X",0)]))
-  }else {
-    stop("Z-score is not defined")
+  } else {
+    message("Z-score is not defined")
   }
-}
+
 
   return(cat("Percentage:", percent))
 }
