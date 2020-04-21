@@ -4,7 +4,7 @@
 \alias{z_to_percent}
 \title{Z score to percentile}
 \usage{
-z_to_percent(z_score)
+z_to_percent(z_score = NULL)
 }
 \arguments{
 \item{z_score}{z-score calculated from z_score function}
