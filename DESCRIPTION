@@ -1,6 +1,6 @@
 Package: HydroCZ
 Type: Package
-Title: HydroC-Precision target z-score calculation 
+Title: HydroC-Precision growth calculation 
 Version: 0.1.0
 Author: Mutaz Jaber
 Depends: R (>= 3.5.0)
@@ -11,4 +11,7 @@ Encoding: UTF-8
 LazyData: true
 RoxygenNote: 7.1.0
 Suggests: 
-    testthat (>= 2.1.0)
+    testthat (>= 2.1.0),
+    knitr,
+    rmarkdown
+VignetteBuilder: knitr
