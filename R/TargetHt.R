@@ -5,9 +5,10 @@
 #' @param HtFather Father's height in cm
 #' @param HtMother Mother's height in cm
 #' @param gender Gender of the child F: Female, M: Male
+#' @example Tarf
 #' @export
 
-TargerHt <- function(HtFather= NULL,
+TargetHt <- function(HtFather= NULL,
                      HtMother = NULL,
                      gender = c("F", "M")){
   if(gender == "F"){
