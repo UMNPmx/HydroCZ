@@ -9,10 +9,10 @@
 #' @param z_score Taregt height z-score
 #' @param z_ht Actual height z-score
 #'
-#' @export corr_ht
+#' @export corr_z_ht
 #'
 
-corr_ht <- function(z_score=NULL
+corr_z_ht <- function(z_score=NULL
                     , z_ht=NULL){
   if(is.null(z_score && z_ht)){
     message("Z scores are required")
