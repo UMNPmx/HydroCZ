@@ -17,7 +17,6 @@ corr_ht <- function(z_score=NULL
   if(is.null(z_score && z_ht)){
     message("Z scores are required")
   }
-
   corr <- z_ht - z_score
   return(corr)
 }
