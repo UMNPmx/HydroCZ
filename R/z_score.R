@@ -8,10 +8,26 @@
 #' @param L box-cox transformation
 #' @export
 
+
 z_score <- function(HtPot = TargetHt,
-                    mHt = NULL,
-                    sdHt = NULL,
-                    L = NULL){
+gender = c("female", "male")){
+if(!is.na(gender)){
+
+  if(gender == "male"){
+    mHt = 176.8414914
+    sdHt = 0.04036818
+    L = 1.16863827
+  } else if(gender == "female"){
+    mHt = 163.3354491
+    sdHt = 0.039637105
+    L = 1.107132561
+  } else {
+    message("Gender is not defined")
+  }
+
   z <- ((HtPot/mHt)^L - 1)/ (L * sdHt)
   return(round(z, digits = 2))
+} else {
+  message("Gender is not defined")
 }
+  }

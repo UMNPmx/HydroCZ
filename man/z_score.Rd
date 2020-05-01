@@ -4,7 +4,7 @@
 \alias{z_score}
 \title{Target Z-score calculation}
 \usage{
-z_score(HtPot = TargetHt, mHt = NULL, sdHt = NULL, L = NULL)
+z_score(HtPot = TargetHt, gender = c("female", "male"))
 }
 \arguments{
 \item{HtPot}{Heigh potential which is equal to TargetHt}
