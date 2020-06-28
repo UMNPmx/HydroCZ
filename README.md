@@ -1,7 +1,6 @@
 
 # HydroC-Precsion: Growth and Z-Score calculation 
 ---
-__(WIP)__
 
 This package is part of HydroC-Percision platform 
 
