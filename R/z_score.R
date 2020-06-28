@@ -22,7 +22,7 @@ if(!is.na(gender)){
     sdHt = 0.039637105
     L = 1.107132561
   } else {
-    message("Gender is not defined")
+    message("Gender is not defined: specify gender as female/male")
   }
 
   z <- ((HtPot/mHt)^L - 1)/ (L * sdHt)

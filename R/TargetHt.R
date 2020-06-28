@@ -16,7 +16,7 @@ TargetHt <- function(HtFather= NULL,
   } else if(gender == "M"){
     Ht <- ((HtMother + 13) + HtFather)/2
   } else {
-    stop("Specifiy the gender")
+    stop("Gender is not specified correctly")
   }
   return(Ht)
 }
